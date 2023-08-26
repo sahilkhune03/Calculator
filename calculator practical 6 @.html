@@ -1,0 +1,81 @@
+<html>
+<title>
+calculator
+</title>
+<style>
+input[type="button"]{
+border-radius:8px;
+border-color:pink;
+color:black;
+background-color:yellow;
+width:100%;
+}
+
+input[type="text"]{
+border-radius:8px;
+border-color:;
+color:orange;
+background-color:black;
+}
+
+input[type="button"]:hover{
+background-color:pink;
+}
+</style>
+<script>
+function clr(){
+document.getElementById('display').value="";
+}
+function data(val){
+document.getElementById('display').value+=val;
+}
+function calculate(){
+var x=document.getElementById('display').value;
+document.getElementById('display').value=eval(x);
+}
+</script>
+
+
+<body>
+<center><b><h1>calculator</h1></b></center>
+<center> 
+<table>
+
+<tr>
+<td><input type="button" value="C" onclick="clr()" style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="display" disabled></td>
+</tr>
+
+<tr>
+<td><input type="button" value="7" onclick="data('7')"/></td>
+<td><input type="button" value="8" onclick="data('8')"/></td>
+<td><input type="button" value="9" onclick="data('9')"/></td>
+<td><input type="button" value="+" onclick="data('+')"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="4" onclick="data('4')"/></td>
+<td><input type="button" value="5" onclick="data('5')"/></td>
+<td><input type="button" value="6" onclick="data('6')"/></td>
+<td><input type="button" value="-" onclick="data('-')"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="1" onclick="data('1')"/></td>
+<td><input type="button" value="2" onclick="data('2')"/></td>
+<td><input type="button" value="3" onclick="data('3')"/></td>
+<td><input type="button" value="*" onclick="data('*')"/></td>
+</tr>
+
+<tr>
+<td><input type="button" value="0" onclick="data('0')"/></td>
+<td><input type="button" value="." onclick="data('.')"/></td>
+<td><input type="button" value="/" onclick="data('/')"/></td>
+<td><input type="button" value="=" onclick="calculate()"/></td>
+</tr>
+
+
+</table>
+</body>
+</html>
+
